@@ -1,6 +1,6 @@
 'use strict';
 
-var http = require('http');
+const http = require('http');
 
 const port = 8080;
 const hostname = '127.0.0.1';
@@ -14,6 +14,7 @@ module.exports = function (store) {
 
     const server = http.createServer(function (req, res) {
         console.log(`method: ${req.method} url: ${req.url}`);
+        
         if (req.method != 'GET' || !req.url)
             return error404(res);
 

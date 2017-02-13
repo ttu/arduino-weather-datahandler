@@ -3,7 +3,7 @@
 const http = require('http');
 
 const port = 8080;
-const hostname = '127.0.0.1';
+const hostname = '0.0.0.0';
 
 const error404 = function (res) {
     res.writeHead(404, { 'Content-Type': 'text/plain' });

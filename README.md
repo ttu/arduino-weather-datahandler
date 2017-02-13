@@ -1,15 +1,14 @@
 # Arduino WeatherShield Data Handler
 
-NOTE: Doesn't work with Node 6.x, but works at least with 5.3.
-
 Get data from Arduino Weather Shield using Johnny Five
 
-Handlers:
-* handlerLocalHttp is for serving data with local http server (used with [Home Assistant](https://home-assistant.io/))
-* handlerPrint for debugging
+Handlers decide what to do when new data is receieved from the Weather Shield.
+* handlerLocalHttp is for serving data with local http server 
+    * Can be used with e.g. [Home Assistant](https://home-assistant.io/)
+* handlerPrint is for debugging
 * handlerAzure is for sending data to Azure IoT Hub
 
-Set correct handler to ./src/app.js and run:
+Set correct handler to `./src/app.js` and run:
 ```
 npm start
 ```
